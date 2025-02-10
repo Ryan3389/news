@@ -5,9 +5,9 @@ function Footer() {
             <span className='footer-container'>
                 <p>NewsHub</p>
                 <span>
-                    <Link>Home</Link>
-                    <Link>GitHub</Link>
-                    <Link>Portfolio</Link>
+                    <Link to="/">Home</Link>
+                    <a target='_blank' href="https://github.com/Ryan3389">GitHub</a>
+                    <a target='_blank' href="https://ryancuthbert.netlify.app/">Portfolio</a>
                 </span>
                 <p>Copyright &copy; Ryan Cuthbert</p>
 

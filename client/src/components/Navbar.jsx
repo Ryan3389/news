@@ -5,9 +5,9 @@ function Navbar() {
             <nav>
                 <p>NewsHub</p>
                 <span>
-                    <Link>Business</Link>
-                    <Link>Technology</Link>
-                    <Link>Sports</Link>
+                    <Link to={`/news?category=${encodeURIComponent('business')}`}>Business</Link>
+                    <Link to={`/news?category=${encodeURIComponent('technology')}`}>Technology</Link>
+                    <Link to={`/news?category=${encodeURIComponent('sports')}`}>Sports</Link>
                 </span>
             </nav>
         </header>

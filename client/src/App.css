@@ -103,3 +103,13 @@ a {
 .hero-search-btn:active {
     background-color: var(--btn-active);
 }
+
+/* News articles */
+
+.news-img {
+    height: 150px;
+}
+
+.news-link {
+    color: #000;
+}
