@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import HomePage from './pages/HomePage.jsx'
 import NewsPage from './pages/NewsPage.jsx'
+import SearchPage from './pages/SearchPage.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: '/news',
         element: <NewsPage />
+      },
+      {
+        path: '/search',
+        element: <SearchPage />
       }
     ]
   }
