@@ -105,6 +105,10 @@ a {
 }
 
 /* News articles */
+.news-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 .news-img {
     height: 150px;
