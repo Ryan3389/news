@@ -5,6 +5,8 @@ function SearchPage() {
         searchTerm: ""
     })
     const [newsState, setNewsState] = useState([])
+
+    console.log(newsState.length)
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormState({
@@ -30,7 +32,7 @@ function SearchPage() {
             }
 
             const data = await response.json()
-            const topResults = data.results.articles.slice(0, 9)
+            const topResults = data.results.articles.slice(0, 6)
             const updateNewsState = topResults.map(article => ({
                 title: article.title,
                 img: article.urlToImage,
@@ -46,31 +48,43 @@ function SearchPage() {
     return (
 
         <>
-            <form onSubmit={handleFormSubmit}>
-                <label htmlFor="searchTerm">Search</label>
+            <form onSubmit={handleFormSubmit} className="search-form">
+                {/* <label htmlFor="searchTerm">Search</label> */}
                 <input
                     type="text"
                     name="searchTerm"
                     id="searchTerm"
                     onChange={handleChange}
                     aria-label="Search"
+                    placeholder="Search for the latest news"
                 />
                 <input type="submit" value="Search" />
             </form>
 
             <section className="news-section">
-                {newsState.map((article, index) => (
-                    <NewsCard
-                        title={article.title}
-                        img={article.img}
-                        newsLink={article.newsLink}
-                        desc={article.description}
-                        key={index}
-                    />
-                ))}
+                <div className="news-container">
+                    {newsState.length === 0 ? <p className="search-cta">Search for the latest news</p> : newsState.map((article, index) => (
+                        <NewsCard
+                            title={article.title}
+                            img={article.img}
+                            newsLink={article.newsLink}
+                            key={index}
+                        />
+                    ))}
+
+                </div>
             </section>
         </>
     )
 }
 
 export default SearchPage
+//  {newsState.map((article, index) => (
+//     <NewsCard
+//         title={article.title}
+//         img={article.img}
+//         newsLink={article.newsLink}
+//         desc={article.description}
+//         key={index}
+//     />
+// ))} 

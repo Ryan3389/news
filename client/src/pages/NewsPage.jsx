@@ -17,13 +17,13 @@ function NewsPage() {
                 }
 
                 const data = await response.json()
-                const topResults = data.results.articles.slice(0, 9)
+                const topResults = data.results.articles.slice(0, 6)
                 const updateNewsState = topResults.map(article => ({
                     title: article.title,
-                    desc: article.description,
                     newsLink: article.url,
                     img: article.urlToImage
                 }))
+
 
                 console.log(updateNewsState)
                 setNewsState(updateNewsState)
@@ -36,15 +36,17 @@ function NewsPage() {
 
     return (
         <section className="news-section">
-            {newsState.map((article, index) => (
-                <NewsCard
-                    title={article.title}
-                    img={article.img}
-                    desc={article.desc}
-                    newsLink={article.newsLink}
-                    key={index}
-                />
-            ))}
+            <div className="news-container">
+                {newsState.map((article, index) => (
+                    <NewsCard
+                        title={article.title}
+                        img={article.img}
+                        newsLink={article.newsLink}
+                        key={index}
+                    />
+                ))}
+
+            </div>
         </section>
     )
 }

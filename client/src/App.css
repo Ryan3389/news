@@ -105,15 +105,133 @@ a {
 }
 
 /* News articles */
-.news-section {
+/* .news-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+} */
+
+.news-section {
+    height: 80vh;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    gap: 7px;
 }
 
 .news-img {
-    height: 150px;
+    height: 120px;
 }
 
 .news-link {
     color: #000;
+}
+
+.news-container h3 {
+    font-size: 1.1rem;
+    /* margin-bottom: 10px; */
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.news-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+    align-items: center;
+    padding-top: 5px;
+
+}
+
+.search-form label {
+    font-size: 1.2rem;
+
+}
+
+.search-form input[type="text"] {
+    padding: 5px 10px;
+}
+
+.search-form input[type="submit"] {
+    padding: 5px 10px;
+    background-color: var(--btn-color);
+    border: none;
+    color: var(--light-gray);
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: var(--btn-hover);
+    transition: 0.3s;
+}
+
+.search-form input[type="submit"]:active {
+    background-color: var(--btn-active);
+}
+
+
+.search-cta {
+    text-align: center;
+}
+
+/* .news-container .news-link {
+    margin-bottom: 5px;
+} */
+
+/* Media Querries */
+
+@media only screen and (max-width: 700px) {
+
+    footer a,
+    p {
+        font-size: 0.8rem;
+    }
+
+    .hero-cta h1 {
+        font-size: 1.8rem
+    }
+
+    .hero-cta p {
+        font-size: 1.3rem
+    }
+
+    .hero-search-btn {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .news-img {
+        height: 90px;
+    }
+
+    .news-container h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .news-img {
+        height: 80px;
+    }
+
+    .news-container h3 {
+        font-size: 0.7rem
+    }
 }
