@@ -49,7 +49,6 @@ function SearchPage() {
 
         <>
             <form onSubmit={handleFormSubmit} className="search-form">
-                {/* <label htmlFor="searchTerm">Search</label> */}
                 <input
                     type="text"
                     name="searchTerm"
@@ -63,15 +62,15 @@ function SearchPage() {
 
             <section className="news-section">
                 <div className="news-container">
-                    {newsState.length === 0 ? <p className="search-cta">Search for the latest news</p> : newsState.map((article, index) => (
+                    {newsState.map((article, index) => (
                         <NewsCard
                             title={article.title}
                             img={article.img}
                             newsLink={article.newsLink}
+                            desc={article.description}
                             key={index}
                         />
                     ))}
-
                 </div>
             </section>
         </>
