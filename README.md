@@ -1,7 +1,7 @@
 # news
 
-## Live URL:
-Check this project out here: 
+## Live URL
+Check this project out here: https://news-t8uc.onrender.com/
 
 ## Description
 NewsHub is a simple CRUD application, powered by the news api, allowing users to browse different news articles in different categories.
