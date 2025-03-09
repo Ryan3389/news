@@ -3,7 +3,7 @@ function NewsCard({ title, desc, newsLink, img, index }) {
         <article key={index} className="news-article">
             <h3>{title}</h3>
             <img src={img} alt={title} className="news-img" />
-            <a href={newsLink} className="news-link">
+            <a target="_blank" href={newsLink} className="news-link">
                 <p>Read more</p>
             </a>
         </article>

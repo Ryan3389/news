@@ -9,7 +9,7 @@
 }
 
 header {
-    height: 10vh;
+    height: 6vh;
     border: 1px solid;
     display: flex;
     align-items: center;
@@ -19,13 +19,14 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
     margin: auto;
 }
 
 nav a {
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 8px;
 }
 
 nav p,
@@ -34,7 +35,7 @@ a {
 }
 
 footer {
-    height: 10vh;
+    height: 6vh;
     background-color: var(--navy-blue);
 }
 
@@ -64,7 +65,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 88vh;
     background-color: var(--light-gray);
 }
 
@@ -105,13 +106,9 @@ a {
 }
 
 /* News articles */
-/* .news-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-} */
 
 .news-section {
-    height: 80vh;
+    height: 88vh;
 }
 
 .news-container {
@@ -119,22 +116,38 @@ a {
     grid-template-columns: 1fr 1fr;
     width: 80%;
     margin: 5px auto;
-    gap: 7px;
+    gap: 3px;
 }
 
 .news-img {
     height: 120px;
+    margin-bottom: 5px;
+
 }
 
 .news-link {
-    color: #000;
+    margin: 2px 0;
+    color: var(--btn-color);
+    font-weight: bold;
+}
+
+.news-link:hover {
+    color: var(--btn-hover);
+}
+
+.news-link:active {
+    color: var(--btn-active)
+}
+
+.news-article:visited {
+    color: var(--navy-blue);
 }
 
 .news-container h3 {
     font-size: 1.1rem;
-    /* margin-bottom: 10px; */
     line-height: 1.5;
     text-align: center;
+    margin-bottom: 5px
 }
 
 
@@ -143,6 +156,10 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid #0000007c;
+    border-radius: 5px;
+    padding: 2px;
+
 }
 
 .search-form {
@@ -193,9 +210,16 @@ a {
 
 /* Media Querries */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1270px) {
+
+
+
     .hero-section h1 {
         font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem
     }
 
     .news-img {
@@ -207,30 +231,16 @@ a {
     }
 }
 
-@media only screen and (max-width: 768px) {
 
-    footer a,
-    p {
-        font-size: 0.8rem;
-    }
-
-    .hero-cta h1 {
-        font-size: 1.8rem
-    }
-
-    .hero-cta p {
-        font-size: 1.2rem
-    }
-
-    .hero-search-btn {
-        padding: 8px 16px;
-        font-size: 1rem;
-    }
-}
 
 
 
 @media only screen and (max-width: 800px) {
+
+    nav p,
+    a {
+        font-size: 0.7rem
+    }
 
     .hero-section h1 {
         font-size: 1.6rem;
@@ -247,10 +257,12 @@ a {
     .news-container h3 {
         font-size: 0.7rem
     }
+
+    footer a,
+    p {
+        font-size: 0.7rem;
+    }
 }
-
-
-
 
 
 @media only screen and (max-width: 600px) {
@@ -260,5 +272,11 @@ a {
 
     .hero-section p {
         font-size: 0.9rem;
+    }
+
+
+    footer a,
+    p {
+        font-size: 0.7rem;
     }
 }

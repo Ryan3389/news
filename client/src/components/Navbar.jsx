@@ -3,10 +3,10 @@ function Navbar() {
     return (
         <header>
             <nav>
-                <p>NewsHub</p>
+                <p className='nav-title'>NewsHub</p>
                 <span>
+                    <Link to="/">Home</Link>
                     <Link to={`/news?category=${encodeURIComponent('politics')}`}>Politics</Link>
-                    {/* <Link to={`/news?category=${encodeURIComponent('business')}`}>Business</Link> */}
                     <Link to={`/news?category=${encodeURIComponent('technology')}`}>Technology</Link>
                     <Link to={`/news?category=${encodeURIComponent('sports')}`}>Sports</Link>
                 </span>
