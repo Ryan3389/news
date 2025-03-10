@@ -38,7 +38,11 @@ function SearchPage() {
                 img: article.urlToImage,
                 newsLink: article.url
             }))
+
+
+
             setNewsState(updateNewsState)
+
             console.log(topResults)
         } catch (error) {
             console.error(error)
@@ -62,7 +66,7 @@ function SearchPage() {
 
             <section className="news-section">
                 <div className="news-container">
-                    {newsState.map((article, index) => (
+                    {newsState.length === 0 ? <p className="news-search-msg">Search for trending news</p> : newsState.map((article, index) => (
                         <NewsCard
                             title={article.title}
                             img={article.img}
@@ -78,12 +82,3 @@ function SearchPage() {
 }
 
 export default SearchPage
-//  {newsState.map((article, index) => (
-//     <NewsCard
-//         title={article.title}
-//         img={article.img}
-//         newsLink={article.newsLink}
-//         desc={article.description}
-//         key={index}
-//     />
-// ))} 

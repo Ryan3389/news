@@ -119,6 +119,11 @@ a {
     gap: 3px;
 }
 
+.news-container .news-search-msg {
+    text-align: center;
+    margin: auto;
+}
+
 .news-img {
     height: 120px;
     margin-bottom: 5px;
